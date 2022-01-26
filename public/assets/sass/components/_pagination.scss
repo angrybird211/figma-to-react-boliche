@@ -1,0 +1,57 @@
+.pagination {
+    display: flex;
+    padding: 0 4rem;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    border: 2px solid $light-color-2;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 0;
+
+    .page-numbers {
+        position: relative;
+        margin-top: 1rem;
+        padding: 0 4.5rem 1rem;
+
+        a {
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+    .number {
+        font-size: 1.6rem;
+        letter-spacing: .1em;
+    }
+
+    i {
+        font-size: 1.4rem;
+    }
+
+    .page-left {
+        margin-right: 1.5rem;
+    }
+
+    .page-right {
+        margin-left: 1.5rem;
+    }
+}
+
+.pagination-wrapper {
+    border-bottom: 2px solid $light-color-2;
+
+    .container-fluid {
+        display: flex;
+    }
+}
+
+@include mq(sm, max) {
+    .pagination {
+        padding: 0 2rem;
+
+        .page-numbers {
+            padding: 0 2.5rem 1rem;
+        }
+    }
+}

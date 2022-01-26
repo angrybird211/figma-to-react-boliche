@@ -1,0 +1,124 @@
+.ranking-page {
+  .ranking-list-one {
+    &::before,
+    &::after {
+      background: $primary-light-color;
+    }
+  }
+
+  .select-box {
+    max-width: 50rem;
+    margin-bottom: 4rem;
+
+    .form-control {
+      background-color: $primary-light-color;
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    &::before {
+      color: $primary-color;
+    }
+  }
+
+  .list-header {
+    margin-bottom: 4rem;
+  }
+
+  .bg-primary-light {
+    padding-bottom: 10rem;
+  }
+
+  .ranking-list-one {
+    padding-bottom: 10rem;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+
+    .container:first-child {
+      background-color: $primary-light-color;
+    }
+  }
+
+  .container-fluid {
+    margin-top: -8rem;
+    overflow: auto hidden;
+  }
+
+  .ranking-wrapper {
+    min-width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .top-10 {
+    padding-bottom: 8rem;
+    background-color: #203147;
+
+    .player-info {
+      padding-left: 0;
+    }
+
+    .player-number {
+      margin-right: 6rem;
+    }
+  }
+
+  .top-3,
+  .top-10 {
+    padding-left: 9rem;
+    padding-right: 9rem;
+  }
+
+  .top-3 {
+    position: relative;
+    padding-top: 5rem;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .player-info {
+    padding: 3rem 0 3rem 7rem;
+    margin-bottom: 0;
+  }
+
+  .player .total-score {
+    margin-left: 1rem;
+  }
+
+  .ranking-title {
+    display: flex;
+    position: relative;
+    margin-bottom: 3.5rem;
+    color: #fff;
+    justify-content: space-between;
+    z-index: 1;
+
+    h2 {
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+    }
+
+    h6 {
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .player-name {
+    min-width: 15rem;
+  }
+}
+
+@include mq(sm, max) {
+  .ranking-list .top-3 .player-number {
+    padding: 1rem 2rem 1rem 4rem;
+  }
+
+  .ranking-page .top-3,
+  .ranking-page .top-10 {
+    padding-left: 4rem;
+  }
+}

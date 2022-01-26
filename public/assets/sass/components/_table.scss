@@ -1,0 +1,87 @@
+.custom-table {
+  border: 2px solid $light-color-2;
+  overflow: auto hidden;
+
+  .table-header,
+  .table-row {
+    display: flex;
+  }
+
+  .table-header {
+    padding: 1rem 3rem;
+    width: fit-content;
+    min-width: 100%;
+    background-color: $light-color-2;
+    color: #fff;
+  }
+
+  .table-row {
+    padding: 2rem 3rem;
+    color: $dark-color;
+  }
+
+  .th {
+    padding: 6px 0;
+
+    &:not(:first-child) {
+      padding-left: 4rem;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px dotted #7290cf;
+    }
+  }
+
+  .td {
+    padding: 1.1rem 0;
+    border-bottom: 1px dotted $primary-color;
+
+    &:not(:first-child) {
+      padding-left: 4rem;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px dotted $primary-color;
+    }
+  }
+
+  .download {
+    padding: 1rem 1.4rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: $green-color;
+    border-radius: 6px 6px 0 0;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@include mq(lg, max) {
+  .custom-table {
+    .td:not(:first-child) {
+      padding-left: 2rem;
+    }
+    .table-row {
+      padding: 2rem 1rem;
+    }
+    .table-header {
+      padding: 1rem;
+    }
+    .td,
+    .th {
+      min-width: 12rem;
+    }
+  }
+
+  .card {
+    padding: 3rem;
+  }
+}

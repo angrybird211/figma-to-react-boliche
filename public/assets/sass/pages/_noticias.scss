@@ -1,0 +1,30 @@
+.noticias {
+    .ranking-list-one {
+        &::before, &::after {
+            background: $light-color-2;
+        }
+    
+        .select-box .form-control {
+            background: $light-color-2;
+        }
+    }
+    
+    .container-fluid {
+        margin-top: -8.4rem;
+    }
+
+    .list-header {
+        margin-bottom: 10rem;
+        padding-top: 8rem;
+    }
+}
+
+@include mq(lg, max) {
+    .noticias {
+        .post-group:last-child {
+            .width-x2.height-x3 {
+                order: 10;
+            }
+        }
+    }
+}

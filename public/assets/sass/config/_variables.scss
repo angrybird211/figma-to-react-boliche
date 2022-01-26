@@ -1,0 +1,32 @@
+$primary-color: #253b58;
+$primary-light-color: #b5cbe8;
+$primary-light-color-2: #256ac3;
+$primary-dark-color: #203147;
+$secondary-color: #e7cd0c;
+$secondary-dark-color: #bfab12;
+$green-color: #278664;
+$gray-color: #f1f1f1;
+$gray-color-2: #787878;
+$light-color: #327fe4;
+$light-color-2: #1f4f8d;
+$dark-color: #414141;
+
+$gray-color: #f1f1f1;
+
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+  xlst: 1920px,
+);
+$max-breakpoints: (
+  xs: 479px,
+  sm: 575px,
+  md: 767px,
+  lg: 991px,
+  xl: 1199px,
+  xxl: 1599px,
+);

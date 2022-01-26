@@ -1,0 +1,34 @@
+@import "./config/variables.scss";
+@import "./config/base.scss";
+@import "./config/helpers.scss";
+
+@import "./mixins/breakpoint";
+
+@import "./vendor/bootstrap";
+
+@import "./base/footer.scss";
+@import "./base/header.scss";
+
+@import "./components/breadcrumb";
+@import "./components/card";
+@import "./components/event";
+@import "./components/feature-box";
+@import "./components/form";
+@import "./components/gallery";
+@import "./components/pagination";
+@import "./components/post";
+@import "./components/ranking";
+@import "./components/schedule";
+@import "./components/table";
+@import "./components/tags";
+@import "./components/title";
+
+@import "./pages/aleta";
+@import "./pages/boliche-evento.scss";
+@import "./pages/eventos.scss";
+@import "./pages/home.scss";
+@import "./pages/noticias.scss";
+@import "./pages/noticias-one.scss";
+@import "./pages/noticias-single";
+@import "./pages/ranking";
+@import "./pages/transparencia";

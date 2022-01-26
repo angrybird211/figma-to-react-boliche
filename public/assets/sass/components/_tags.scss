@@ -1,0 +1,25 @@
+.tags-title {
+  margin-bottom: 4rem;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 0.8rem 1.4rem;
+  margin-bottom: 2rem;
+  margin-right: 3.3rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  background-color: $primary-color;
+  border-radius: 10rem;
+
+  a {
+    color: #fff;
+    white-space: nowrap;
+  }
+}

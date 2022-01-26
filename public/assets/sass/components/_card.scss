@@ -1,0 +1,96 @@
+.card {
+  position: relative;
+  margin-bottom: 2rem;
+  background: #e3e3e3;
+  color: $light-color-2;
+
+  .card-title {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "\f056";
+      font-family: "Font Awesome 6 Free";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      font-size: 2.3rem;
+      font-weight: 600;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:not(.collapsed) {
+    .card-title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &.card-one {
+    padding: 5rem 7rem;
+
+    h2 {
+      margin-left: 5rem;
+      font-size: 3.5rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  &.card-two {
+    padding: 2rem 0;
+    margin-bottom: 0;
+    border-top: 1px dotted #000;
+    border-width: 1px 0 0;
+    border-radius: 0;
+
+    .card-title {
+      &::before {
+        color: #8b1ea6;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px dotted #000;
+    }
+
+    &.collpase .card-title {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-left: 5rem;
+      font-size: 2rem;
+      letter-spacing: 0.2em;
+      color: #424242;
+    }
+  }
+
+  .card-body {
+    padding: 0;
+
+    table {
+      width: 100%;
+      padding: 1.5rem;
+    }
+
+    thead {
+      width: 100%;
+      background-color: $primary-color;
+    }
+  }
+
+  &.collapsed .card-title::before {
+    content: "\f055";
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@include mq(md, max) {
+  .card .card-title h2 {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,85 @@
+.header-top {
+    background-color: $gray-color;
+
+    .header-right {
+        margin-bottom: -2rem;
+    }
+
+    .container {
+        display: flex;
+        padding-top: 5rem;
+        justify-content: space-between;
+    }
+
+    .social-icon {
+        margin-right: 5rem;
+        font-size: 19px;
+    }
+
+    .login {
+        font-size: 12px;
+    }
+
+    .logo {
+        position: relative;
+        transform: translateY(3.5rem);
+        z-index: 10;
+    }
+}
+
+.header {
+    .main-nav li {
+        font-size: 16px;
+        font-weight: 500;
+
+        &:not(:last-child) {
+            margin-right: 11.5rem;
+        }
+    }
+}
+
+.header-middle {
+    .container {
+        padding: 2.5rem 0;
+    }
+}
+
+.header-bottom {
+    padding: 3rem 0 2rem;
+}
+
+@include mq(lg, max) {
+    .logo-text {
+        display: none;
+    }
+
+    .header .main-nav li:not(:last-child) {
+        margin-right: 6.5rem;
+    }
+}
+
+@include mq(md, max) {
+    .header .main-nav li:not(:last-child) {
+        margin-right: 1.5rem;
+    }
+}
+
+@include mq(sm, max) {
+    .header-top {
+        .logo {
+            max-width: 12rem;
+        }
+
+        .social-icon {
+            margin-right: 2rem;
+        }
+
+        .container {
+            padding: 0;
+        }
+    }
+
+    .header-middle {
+        display: none;
+    }
+}

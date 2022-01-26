@@ -1,0 +1,193 @@
+.ranking-list {
+  position: relative;
+
+  .top-10 {
+    .player-list {
+      padding: 0 0 0 4.5rem;
+    }
+
+    .player-number {
+      margin-right: 2rem;
+    }
+
+    .total-score {
+      margin-left: 2rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+    }
+  }
+
+  .top-3 {
+    .player-number {
+      position: absolute;
+      padding: 1rem 2rem 1rem 10rem;
+      border-radius: 0 10px 10px 0;
+      left: 0;
+
+      h2 {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ranking-list-one {
+  padding-bottom: 5rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 0;
+    background: $primary-color;
+    border-radius: 5px 0 0 5px;
+  }
+
+  &::after {
+    left: 50%;
+    background: $primary-dark-color;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.list-header {
+  display: flex;
+  margin-bottom: 7rem;
+  padding-top: 7rem;
+  justify-content: space-between;
+}
+
+.player-list {
+  padding-right: 4.5rem;
+}
+
+.player {
+  .player-info {
+    margin-bottom: 3rem;
+    padding-left: 11rem;
+    align-items: center;
+  }
+
+  .player-avatar {
+    margin-right: 1.5rem;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .player-name {
+    max-width: 15rem;
+    // margin-right: 10rem;
+    font-size: 2rem;
+  }
+
+  .player-nation {
+    margin-left: auto;
+  }
+
+  h3 {
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  .player-score {
+    padding: 1rem 3rem;
+    border-right: 1px solid;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      border-right: 0;
+    }
+
+    h5 {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  .total-score {
+    margin-left: auto;
+
+    h3 {
+      padding: 1rem 3.5rem;
+      border: 2px solid;
+      border-radius: 5px;
+    }
+  }
+
+  img {
+    max-width: 7rem;
+  }
+}
+
+@include mq("1366px", max) {
+  .player .player-info {
+    padding-left: 16rem;
+  }
+
+  .player-list {
+    padding-right: 0;
+  }
+
+  .player .player-score {
+    padding: 1rem 2rem;
+  }
+}
+
+@include mq(lg, max) {
+  .ranking-list .col-lg-6:last-child .player-list {
+    padding-left: 0;
+  }
+}
+
+@include mq(md, max) {
+  .ranking-list {
+    .list-header {
+      flex-direction: column;
+    }
+
+    .section-title {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@include mq(sm, max) {
+  .player .player-info {
+    padding-left: 7rem;
+  }
+
+  .ranking-list .top-3 .player-number {
+    padding: 1rem 2rem;
+  }
+}
+
+@include mq(xs, max) {
+  .player-nation,
+  .total-score {
+    display: none;
+  }
+
+  .player .player-name {
+    max-width: none;
+  }
+
+  .header-top .logo {
+    max-width: 11rem;
+  }
+}

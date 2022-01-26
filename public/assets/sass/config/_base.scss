@@ -1,0 +1,53 @@
+html {
+    font-size: 10px;
+}
+
+#root {
+    overflow: hidden;
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+    width: 118rem;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    transition: opacity .35s;
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+.light-bar {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 7px;
+        width: 100%;
+        background-color: $light-color;
+    }
+
+    &.light-bar-green::before {
+        background: $green-color;
+    }
+}

@@ -1,0 +1,41 @@
+.select-box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+
+    &::before {
+        content: "\f063";
+        display: inline-block;
+        position: absolute;
+        bottom: 20%;
+        right: 2rem;
+        font-family: "Font Awesome 6 Free";
+        font-size: 18px;
+        font-weight: 900;
+        color: #fff;
+    }
+
+    label {
+        margin-left: 1.8rem;
+        font-size: 1.5rem;
+        letter-spacing: .1em;
+    }
+
+    .form-control {
+        margin-top: 1.5rem;
+        padding: 1rem 23rem 1rem 1.8rem;
+        font-size: 2rem;
+        letter-spacing: .1em;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: $primary-color;
+        color: #fff;
+    }
+}
+
+@include mq(md, max) {
+    .select-box .form-control {
+        padding-right: 0;
+    }
+}

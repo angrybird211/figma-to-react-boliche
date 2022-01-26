@@ -1,0 +1,100 @@
+.y-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.x-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.xy-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-green {
+  color: $green-color;
+}
+
+.bg-green {
+  background: $green-color;
+}
+
+.text-gray {
+  color: $gray-color;
+}
+
+.text-secondary-dark {
+  color: $secondary-dark-color;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.divider-left {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: $light-color-2;
+  }
+}
+
+.divider-right {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: $light-color-2;
+  }
+}
+
+.right-circle {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 6rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: #e3e3e3;
+    transform: translateY(-50%);
+  }
+}
+
+.bg-primary-light {
+  background-color: $primary-light-color;
+}
+
+@for $i from 0 through 10 {
+  .ml-#{$i} {
+    margin-left: #{$i * 0.5}rem !important;
+  }
+
+  .mr-#{$i} {
+    margin-right: #{$i * 0.5}rem !important;
+  }
+
+  .pl-#{$i} {
+    padding-left: #{$i * 0.5}rem !important;
+  }
+
+  .pr-#{$i} {
+    padding-right: #{$i * 0.5}rem !important;
+  }
+}

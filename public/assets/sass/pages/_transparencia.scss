@@ -1,0 +1,29 @@
+.transparencia {
+  .ranking-list-one {
+    &::before,
+    &::after {
+      background: $green-color;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+    }
+  }
+
+  .accordion {
+    margin-top: -6rem;
+    border-radius: 6px;
+  }
+}
+
+@include mq("1400px") {
+  .transparencia .container-fluid {
+    padding: 0;
+  }
+}
